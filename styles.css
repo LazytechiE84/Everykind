@@ -626,6 +626,8 @@ footer{
 }
 
 /* RESPONSIVE */
+
+/* Tablet: tighten side padding, everything still in its normal layout */
 @media (max-width: 1100px){
     header nav,
     main,
@@ -633,8 +635,13 @@ footer{
         padding-left: 40px;
         padding-right: 40px;
     }
+
+    #products .cards{
+        padding: 0 20px;
+    }
 }
 
+/* Large phone / small tablet: stack the hero, center text, single-column CTA */
 @media (max-width: 900px){
     main{
         flex-direction: column;
@@ -656,6 +663,20 @@ footer{
         max-height: 420px;
     }
 
+    main #hero-section #data{
+        gap: 20px;
+    }
+
+    .services .service div{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .testi-item{
+        width: 100%;
+        max-width: 400px;
+    }
+
     .cta{
         text-align: center;
         flex-direction: column;
@@ -673,8 +694,13 @@ footer{
     .cta-buttons{
         justify-content: center;
     }
+
+    .footer-grid{
+        justify-content: space-between;
+    }
 }
 
+/* Phone: single-column nav, stacked buttons, tighter type */
 @media (max-width: 700px){
     header nav{
         padding: 12px 20px;
@@ -688,6 +714,32 @@ footer{
         justify-content: center;
         padding-top: 10px;
         flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    main{
+        padding: 30px 20px;
+    }
+
+    main #hero-section h1{
+        font-size: 2.3em;
+    }
+
+    main #hero-section button{
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+    }
+
+    main #hero-section #data{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    section{
+        padding: 60px 20px;
     }
 
     .head{
@@ -698,7 +750,104 @@ footer{
         font-size: 1.1em;
     }
 
+    #products .cards .item{
+        width: 100%;
+        max-width: 320px;
+    }
+
     .magic #magic .magic-video video{
         height: auto;
+        max-width: 100%;
+    }
+
+    .magic .standards{
+        gap: 30px;
+    }
+
+    .magic .standards > div{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .cta-img img{
+        aspect-ratio: 4 / 3;
+    }
+
+    .cta-buttons{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-buttons button,
+    .cta-buttons a{
+        text-align: center;
+        justify-content: center;
+    }
+
+    footer{
+        padding: 50px 20px 25px;
+    }
+
+    .footer-grid{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand{
+        max-width: 100%;
+    }
+
+    .footer-socials{
+        justify-content: center;
+    }
+
+    .footer-col p{
+        justify-content: center;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+/* Small phone: trim type scale further so headings don't wrap awkwardly */
+@media (max-width: 480px){
+    main #hero-section p.label{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    main #hero-section h1{
+        font-size: 1.9em;
+    }
+
+    main #hero-section .hero-text{
+        font-size: 1.05em;
+    }
+
+    main #hero-section #data h3{
+        font-size: 26px;
+    }
+
+    .head{
+        font-size: 1.7em;
+    }
+
+    .par{
+        font-size: 1em;
+    }
+
+    #products .cards .item,
+    .services .service div,
+    .testi-item,
+    .magic .standards > div{
+        max-width: 100%;
+    }
+
+    nav span img{
+        height: 24px;
     }
 }
