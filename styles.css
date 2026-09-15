@@ -611,6 +611,16 @@ footer{
     width: 18px;
 }
 
+.footer-col p a{
+    color: #9ca3af;
+    font-size: 0.95em;
+    transition: color 0.2s;
+}
+
+.footer-col p a:hover{
+    color: var(--primary-color);
+}
+
 .footer-bottom{
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 25px;
